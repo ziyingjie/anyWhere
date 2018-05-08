@@ -1,0 +1,31 @@
+{
+  "name": "anywhere",
+  "version": "1.0.0",
+  "description": "Node JS static web server",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziyingjie/anyWhere.git"
+  },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziyingjie/anyWhere/issues"
+  },
+  "homepage": "https://github.com/ziyingjie/anyWhere#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "pre-commit": "^1.2.2"
+  }
+}
