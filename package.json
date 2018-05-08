@@ -22,7 +22,9 @@
     "url": "https://github.com/ziyingjie/anyWhere/issues"
   },
   "homepage": "https://github.com/ziyingjie/anyWhere#readme",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
