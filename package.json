@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Node JS static web server",
   "main": "src/bpp.js",
+  "bin":{
+    "ziying":"bin/ziying"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",

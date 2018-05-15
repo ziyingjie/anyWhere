@@ -16,7 +16,7 @@ const template = Handlebars.compile(source.toString());
 
 const compress = require('./compress');
 
-module.exports = async function (req, res, filePath) {
+module.exports = async function (req, res, filePath,config) {
     const stats = await stat(filePath);
     try {
         if (stats.isFile()) {

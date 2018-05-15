@@ -4,6 +4,7 @@ const path = require('path');
 const conf = require('./config/defaltConfig');
 const chalk = require('chalk');
 const route = require('./helper/router');
+const openUrl = require('./helper/openUrl');
 
 
 class Server {
@@ -21,6 +22,7 @@ class Server {
         server.listen(this.conf.port, this.conf.hostname, () => {
             const result = `http://${this.conf.hostname}:${this.conf.port}`;
             console.log(`Server start at ${chalk.green(result)}`);
+            openUrl(result);
         });
     }
 }
