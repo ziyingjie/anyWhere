@@ -2,7 +2,7 @@
   "name": "anywhere",
   "version": "1.0.0",
   "description": "Node JS static web server",
-  "main": ".eslintrc.js",
+  "main": "src/bpp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
@@ -24,7 +24,9 @@
   "homepage": "https://github.com/ziyingjie/anyWhere#readme",
   "dependencies": {
     "chalk": "^2.4.1",
-    "handlebars": "^4.0.11"
+    "handlebars": "^4.0.11",
+    "yargs": "^11.0.0",
+    "yarn": "^1.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",

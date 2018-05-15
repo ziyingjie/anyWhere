@@ -1,17 +1,27 @@
 const http = require('http');
 
 const path = require('path');
-const config = require('./config/defaltConfig');
+const conf = require('./config/defaltConfig');
 const chalk = require('chalk');
 const route = require('./helper/router');
 
-const server = http.createServer((req, res) => {
-    const filePath = path.join(config.root, req.url);
-    //判断是文件or文件夹
-    route(req, res, filePath);
-});
 
-server.listen(config.port, config.hostname, () => {
-    const result = `http://${config.hostname}:${config.port}`;
-    console.log(`Server start at ${chalk.green(result)}`);
-});
+class Server {
+    constructor(config) {
+        this.conf = Object.assign({}, conf, config);
+    }
+
+    start() {
+        const server = http.createServer((req, res) => {
+            const filePath = path.join(this.conf.root, req.url);
+            //判断是文件or文件夹
+            route(req, res, filePath,this.conf);
+        });
+
+        server.listen(this.conf.port, this.conf.hostname, () => {
+            const result = `http://${this.conf.hostname}:${this.conf.port}`;
+            console.log(`Server start at ${chalk.green(result)}`);
+        });
+    }
+}
+module.exports = Server;
